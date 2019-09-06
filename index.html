@@ -18,11 +18,18 @@
   <script>
     require([
       "esri/Map",
+      "esri/WebMap",
       "esri/views/MapView"
-    ], function(Map, MapView) {
+    ], function(Map, WebMap, MapView) {
 
-      var map = new Map({
-        basemap: "topo-vector"
+      // var map = new Map({
+      //   basemap: "topo-vector"
+      // });
+
+      var map = new WebMap({
+        portalItem: {
+          id: "3773ca41d93545d1a4e79de203756126"
+        }
       });
 
       var view = new MapView({
